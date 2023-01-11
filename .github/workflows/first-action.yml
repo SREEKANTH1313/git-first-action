@@ -9,8 +9,7 @@ jobs:
       - name: print goodbye
         run: echo "Done-bye"
       - name: python
-        run: a = [i for i in range(1,10)]
-             print(a)
+        run: print(i for i in range(1,10))
              print('Hello sree')
                  
        
