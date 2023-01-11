@@ -8,6 +8,10 @@ jobs:
         run: echo "hello-world!"
       - name: print goodbye
         run: echo "Done-bye"
+      - name: python
+        run: a = [i for i in range(1,10)]
+             print(a)
+                 
        
      
       
