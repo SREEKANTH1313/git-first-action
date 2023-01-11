@@ -9,7 +9,7 @@ jobs:
       - name: print goodbye
         run: echo "Done-bye"
       - name: python
-        run: print(i for i in range(1,10))
+        run: print(sum(i for i in range(1,10)))
              print('Hello sree')
                  
        
