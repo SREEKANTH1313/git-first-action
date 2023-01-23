@@ -24,7 +24,16 @@ jobs:
         aws-access-key-id: AKIAR4HMVUUY74TM3FG5
         aws-secret-access-key: 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
         aws-region: us-east-1
-
+    - name: Login to Amazon ECR
+      id: login-ecr
+      uses: aws-actions/amazon-ecr-login@v1
+    - name: build
+      run: docker build -t terraformaws .
+    - name: tag
+      run: docker tag terraformaws:latest 129345365297.dkr.ecr.us-east-1.amazonaws.com/terraformaws:latest
+    - name: push
+      run: docker push 129345365297.dkr.ecr.us-east-1.amazonaws.com/terraformaws:latest
+      
    
 
   
