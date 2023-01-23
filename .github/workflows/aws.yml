@@ -1,0 +1,30 @@
+name: Deploy to Amazon ECS
+
+on:
+  push:
+    branches: [ "main" ]
+
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: windows-latest
+    environment: production
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    - name: Configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-access-key-id: AKIAR4HMVUUY74TM3FG5
+        aws-secret-access-key: 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
+        aws-region: us-east-1
+
+   
+
+  
