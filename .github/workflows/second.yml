@@ -1,0 +1,9 @@
+name: Second Workflow
+on: workflow_dispatch
+jobs:
+  first-job:
+     runs-on: windows-latest
+     steps:
+        - name: python
+          run: print("Hello Sreekanth Good Morning")
+        
