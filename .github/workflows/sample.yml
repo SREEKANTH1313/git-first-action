@@ -1,0 +1,11 @@
+name: sree 
+on: workflow_dispatch
+jobs:
+  first-one:
+    runs-on: windows-latest
+    steps:
+       - name: python
+         run: print("Good Morning")
+       - name: second
+         run: print("Thank you")
+         
