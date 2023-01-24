@@ -19,8 +19,8 @@ jobs:
     - name: Configure AWS credentials
       uses: aws-actions/configure-aws-credentials@v1
       with:
-        aws-access-key-id: AKIAR4HMVUUY74TM3FG5
-        aws-secret-access-key: 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
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRETE_KEY }}
         aws-region: us-east-1
         
     - name: intializing terraform
@@ -29,13 +29,4 @@ jobs:
       run: terraform plan
     - name: building terraform
       run: terraform apply -auto-approve
-    - name: Login to Amazon ECR
-      id: login-ecr
-      uses: aws-actions/amazon-ecr-login@v1
-    - name: build
-      run: docker build -t terraform .
-    - name: tag
-      run: docker tag terraform:latest 129345365297.dkr.ecr.us-east-1.amazonaws.com/terraform:latest
-    - name: push
-      run: docker push 129345365297.dkr.ecr.us-east-1.amazonaws.com/terraform:latest    
-      
+ 
