@@ -22,8 +22,6 @@ jobs:
         aws-access-key-id: AKIAR4HMVUUY74TM3FG5
         aws-secret-access-key: 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
         aws-region: us-east-1
-        
-        
     - name: intializing terraform
       run: terraform init
     - name: plan
