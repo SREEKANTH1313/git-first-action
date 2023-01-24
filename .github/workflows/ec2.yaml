@@ -23,10 +23,19 @@ jobs:
         aws-secret-access-key: HK3hb01xqLabHY3nXmSK46F6W0ueV8qw4hbxfDbw
         aws-region: us-east-1
         
-    - name: intializing terraform
+    - name: Now We Intializing terraform
       run: terraform init
     - name: plan
       run: terraform plan
     - name: building terraform
       run: terraform apply -auto-approve
+    - name: Login to Amazon ECR
+      id: login-ecr
+      uses: aws-actions/amazon-ecr-login@v1
+    - name: build
+      run: docker build -t terraform .
+    - name: tag
+      run: docker tag terraform:latest 129345365297.dkr.ecr.us-east-1.amazonaws.com/terraform:latest
+    - name: push
+      run: docker push 129345365297.dkr.ecr.us-east-1.amazonaws.com/terraform:latest      
  
