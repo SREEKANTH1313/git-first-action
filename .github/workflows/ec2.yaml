@@ -1,8 +1,8 @@
 name: Deploy to Amazon ECSs
 
-on: workflow_dispatch
-
-
+on:
+  push:
+    branches: [ "main" ]
 permissions:
   contents: read
 
