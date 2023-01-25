@@ -32,7 +32,12 @@ jobs:
     - name: tag
       run: docker tag terraform:latest 129345365297.dkr.ecr.us-east-1.amazonaws.com/terraform:latest
     - name: push
-      run: docker push 129345365297.dkr.ecr.us-east-1.amazonaws.com/terraform:latest      
+      run: docker push 129345365297.dkr.ecr.us-east-1.amazonaws.com/terraform:latest   
+    - name: pull
+      run: docker pull 129345365297.dkr.ecr.us-east-1.amazonaws.com/terraform:latest  
+    - name: run
+      run: docker run 129345365297.dkr.ecr.us-east-1.amazonaws.com/terraform@sha256:e1971fca854b7f71f2f0a9f88d5e5041ba722d278d1077d0db828df748e0f882
+ 
    
 
   
