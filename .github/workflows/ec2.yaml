@@ -36,6 +36,8 @@ jobs:
     - name: Tag
       run: docker tag terraform:latest 129345365297.dkr.ecr.us-east-1.amazonaws.com/terraform:latest
     - name: Push
-      run: docker push 129345365297.dkr.ecr.us-east-1.amazonaws.com/terraform:latest     
+      run: docker push 129345365297.dkr.ecr.us-east-1.amazonaws.com/terraform:latest  
+    - name: Pull
+      run: docker pull 129345365297.dkr.ecr.us-east-1.amazonaws.com/terraform:latest  
    
  
