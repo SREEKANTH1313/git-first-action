@@ -10,7 +10,7 @@ jobs:
       - name: print goodbye
         run: echo "Done-bye"
       - name: python
-        run: echo"12+24"
+        run: echo "12+24"
              echo 'Hello sree'
                  
        
