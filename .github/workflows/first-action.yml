@@ -10,8 +10,8 @@ jobs:
       - name: print goodbye
         run: echo "Done-bye"
       - name: python
-        run: print(sum(12+24))
-             print('Hello sree')
+        run: echo"12+24"
+             echo 'Hello sree'
                  
        
      
