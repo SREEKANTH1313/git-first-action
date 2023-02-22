@@ -1,3 +1,5 @@
+
+
 --------------------------- Source Table --------------------------------------------
 
 create table employee(emp_id int,emp_Name varchar(225),salary int,company varchar(225));
